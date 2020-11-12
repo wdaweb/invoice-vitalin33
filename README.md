@@ -51,8 +51,10 @@
    - code
    - number
    - period
-   - expend
+   - payment
    - year
+   - date
+   - create_time
 2. 獎號資料表- award_number
    - id
    - period

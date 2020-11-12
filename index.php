@@ -17,8 +17,17 @@
 <body>
 
     <?php 
+
+    if(isset($_GET['do'])){
+
+        $file=$_GET['do'].".php";
+        include $file;
+
+
+    }else{
         include "main.php";
-        ?>
+    }
+    ?>
 
 
 
