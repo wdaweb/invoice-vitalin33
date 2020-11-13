@@ -1,5 +1,5 @@
 
-<form action="api/add_awards_number.php" method="post">
+<form action="api/add_award_number.php" method="post">
 <table class="table table-bordered table-sm" summary="統一發票中獎號碼單"> 
    <tbody>
     <tr> 
@@ -22,7 +22,7 @@
          <input type="number" name="special_prize" maxlength="10" min="00000001" max="99999999"></td> 
     </tr> 
     <tr> 
-     <td headers="specialPrize"> 同期統一發票收執聯8位數號碼與特別獎號碼相同者獎金1,000萬元 </td> 
+     <td headers="special_prize"> 同期統一發票收執聯8位數號碼與特別獎號碼相同者獎金1,000萬元 </td> 
     </tr> 
     <tr> 
      <th id="grand_prize" rowspan="2">特獎</th> 
@@ -61,8 +61,8 @@
      <td headers="fivePrize"> 同期統一發票收執聯末4 位數號碼與頭獎中獎號碼末4 位相同者各得獎金1千元 </td> 
     </tr> 
     <tr hidden> 
-     <th id="sixPrize">六獎</th> 
-     <td headers="sixPrize"> 同期統一發票收執聯末3 位數號碼與 頭獎中獎號碼末3 位相同者各得獎金2百元 </td> 
+     <th id="addSix_prize[]">六獎</th> 
+     <td headers="addSix_prize[]"> 同期統一發票收執聯末3 位數號碼與 頭獎中獎號碼末3 位相同者各得獎金2百元 </td> 
     </tr> 
     <tr> 
      <th id="addSix_prize">增開六獎</th> 

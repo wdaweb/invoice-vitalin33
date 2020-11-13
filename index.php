@@ -44,7 +44,7 @@
     </div>
     <div class="text-center">
         
-        <a href="#" class="btn btn-info p-2">對獎</a>
+        <a href="?do=award_numbers" class="btn btn-info p-2">對獎</a>
     </div>
     <div class="text-center">
         
