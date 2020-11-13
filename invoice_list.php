@@ -27,7 +27,7 @@ $row=$pdo->query($sql)->fetchALL();
         <td><?=$row['payment'];?></td>
         <td>
             <button class="btn btn-primary btn-sm text-light">
-                <a href="?do=edit_invoice&id=<?=$row['id'];?>" class="text-light text-decoration-none">編輯</a></button>
+                <a href="?do=edit_invoice&id=<?=$row['id'];?>" class="text-light text-decoration-none">編輯</a></button> <!-- 在按下編輯的時候， 可以將頁面導向編輯頁面-->
             <button class="btn btn-danger btn-sm">刪除</button>
 
 
