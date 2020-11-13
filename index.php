@@ -38,7 +38,7 @@
    
    
    
-    <div class="text-center btn btn-outline-secondary p-2" ><?=$month[$m];?></div>
+    <div class="text-center btn btn-outline-secondary p-2" disabled ><?=$month[$m];?></div>
     <div class="text-center">
         <a href="?do=invoice_list" class="btn btn-info p-2">當期發票</a>  <!--?=在當前頁重載一次-->
     </div>
