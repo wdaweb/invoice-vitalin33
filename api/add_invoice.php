@@ -34,7 +34,7 @@
     $pdo->exec($sql);  //新增的話不用用FETCH
 
     echo "新增完成";
-    header("location:../index.php");
+    header("location:../index.php?do=invoice_list");
 
 
 ?>

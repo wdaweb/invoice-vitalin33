@@ -16,20 +16,68 @@
 </head>
 <body>
 
+
+<h3 class="text-center mt-5">統一發票記錄與對獎</h3>
+
+<div class="container pt-5">
+    <div class="col-8 d-flex justify-content-between mx-auto p-3 border">
+   
     <?php 
 
-    if(isset($_GET['do'])){
+        $month=[
+                    1=>"1,2月",
+                    2=>"3,4月",
+                    3=>"5,6月",
+                    4=>"7,8月",
+                    5=>"9,10月",
+                    6=>"11,12月"
+        ];
 
-        $file=$_GET['do'].".php";
-        include $file;
-
-
-    }else{
-        include "main.php";
-    }
+            $m=ceil(date("m")/2);
     ?>
+   
+   
+   
+    <div class="text-center"><?=$month[$m];?></div>
+    <div class="text-center">
+        <a href="?do=invoice_list">當期發票</a>  <!--?=在當前頁重載一次-->
+    </div>
+    <div class="text-center">
+        
+        <a href="#">對獎</a>
+    </div>
+    <div class="text-center">
+        
+        <a href="#">輸入獎號</a>
+        </div>
+        <div class="text-center">
+            
+            <a href="index.php">回到首頁</a>   <!--連結處不要打?，因為有些首頁有帶參數，打?重載當前頁面會造成混亂，-->
+    </div>
 
 
+
+    </div>
+
+
+    <div class="col-8 d-flex mx-auto p-3 border">
+    <?php 
+
+        if(isset($_GET['do'])){
+
+            $file=$_GET['do'].".php";
+            echo $file;         //
+            include $file;
+
+
+        }else{
+            include "main.php";
+        }
+        ?>
+
+    </div>
+    </div>
+</div>
 
 </body>
 </html>
