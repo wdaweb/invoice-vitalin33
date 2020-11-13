@@ -1,17 +1,12 @@
-<?php
-    include_once "base.php";
 
-    ?>
-
-<form action="api/add_awards_number.php" method="">
+<form action="api/add_awards_number.php" method="post">
 <table class="table table-bordered table-sm" summary="統一發票中獎號碼單"> 
    <tbody>
     <tr> 
      <th id="months">年月份</th> 
      <td headers="months" class="title"> 
-         
      <input type="number" name="year" min="<?=date("Y")-1;?>" max="<?=date("Y")+1;?>" step="1" value="<?=date("Y");?>">年 
-     <select name="" id="">
+     <select name="period" id="">
          <option value="1">01~02</option>
          <option value="2">03~04</option>
          <option value="3">05~06</option>
@@ -40,9 +35,9 @@
     <tr> 
      <th id="first_prize" rowspan="2">頭獎</th> 
      <td headers="first_prize" class="number">
-     <input type="number" name="first_prize" maxlength="10" min="00000001" max="99999999">
-     <input type="number" name="first_prize" maxlength="10" min="00000001" max="99999999">
-     <input type="number" name="first_prize" maxlength="10" min="00000001" max="99999999">     
+     <input type="number" name="first_prize[]" maxlength="10" min="00000001" max="99999999">
+     <input type="number" name="first_prize[]" maxlength="10" min="00000001" max="99999999">
+     <input type="number" name="first_prize[]" maxlength="10" min="00000001" max="99999999">     
     
     </td> 
     </tr> 
@@ -70,11 +65,11 @@
      <td headers="sixPrize"> 同期統一發票收執聯末3 位數號碼與 頭獎中獎號碼末3 位相同者各得獎金2百元 </td> 
     </tr> 
     <tr> 
-     <th id="addSixPrize">增開六獎</th> 
-     <td headers="addSixPrize" class="number">
-     <input type="number" name="first_prize" maxlength="10" min="001" max="999">  
-     <input type="number" name="first_prize" maxlength="10" min="001" max="999">  
-     <input type="number" name="first_prize" maxlength="10" min="001" max="999">  
+     <th id="addSix_prize">增開六獎</th> 
+     <td headers="addSix_prize" class="number">
+     <input type="number" name="addSix_prize[]" maxlength="10" min="001" max="999">  
+     <input type="number" name="addSix_prize[]" maxlength="10" min="001" max="999">  
+     <input type="number" name="addSix_prize[]" maxlength="10" min="001" max="999">  
      </td> 
     </tr> 
    </tbody>
@@ -82,8 +77,8 @@
 
   </table> 
   <div class="text-center">
-       <input type="submit" value="儲存">
-       <input type="reset" value="清空">
+            <input type="submit" value="儲存" class="mx-2 btn btn-primary">
+            <input type="reset" value="清空" class="mx-2 btn btn-warning">
    </div>
  </div> 
 </div>
