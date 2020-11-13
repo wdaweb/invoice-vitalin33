@@ -1,14 +1,41 @@
 <?php
 include_once "base.php";
 
-$sql="select * from `invoices`";
-$row=$pdo->query($sql)->fetchALL();
+$sql="select * from `invoices` order by date";  //可以在此加入排序清單
+                                                //ORDER BY用途：order by date [由小到大] .... order by date desc [由大到小]
 
-foreach($row as $row){
-
-    echo $row['code'].$row['number']."<br>";
-}
+$row=$pdo->query($sql)->fetchALL();   
 
 
 
 ?>
+
+<table class="table text-center ">
+    <tr>
+        <td>發票號碼：</td>
+        <td>消費日期：</td>
+        <td>消費金額：</td>
+        <td>操作</td>
+    </tr>
+
+    <?php                //建兩個PHP，因為要用迴圈包住要填入的資料，所以要注意括號的位置
+    foreach($row as $row){
+    ?>
+    <tr >
+        <td><?=$row['code'].$row['number'];?></td>
+        <td><?=$row['date'];?></td>
+        <td><?=$row['payment'];?></td>
+        <td>
+            <button class="btn btn-primary btn-sm">編輯</button>
+            <button class="btn btn-danger btn-sm">刪除</button>
+
+
+        </td>
+    </tr>
+
+    <?php
+
+    }
+    ?>
+
+</table>

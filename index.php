@@ -19,7 +19,7 @@
 
 <h3 class="text-center mt-5">統一發票記錄與對獎</h3>
 
-<div class="container pt-5">
+<div class="container pt-5" >
     <div class="col-8 d-flex justify-content-between mx-auto p-3 border">
    
     <?php 
@@ -38,21 +38,21 @@
    
    
    
-    <div class="text-center"><?=$month[$m];?></div>
+    <div class="text-center btn btn-outline-secondary p-2" ><?=$month[$m];?></div>
     <div class="text-center">
-        <a href="?do=invoice_list">當期發票</a>  <!--?=在當前頁重載一次-->
+        <a href="?do=invoice_list" class="btn btn-info p-2">當期發票</a>  <!--?=在當前頁重載一次-->
     </div>
     <div class="text-center">
         
-        <a href="#">對獎</a>
+        <a href="#" class="btn btn-info p-2">對獎</a>
     </div>
     <div class="text-center">
         
-        <a href="#">輸入獎號</a>
+        <a href="#" class="btn btn-info p-2">輸入獎號</a>
         </div>
         <div class="text-center">
             
-            <a href="index.php">回到首頁</a>   <!--連結處不要打?，因為有些首頁有帶參數，打?重載當前頁面會造成混亂，-->
+            <a href="index.php" class="btn btn-info p-2">回到首頁</a>   <!--連結處不要打?，因為有些首頁有帶參數，打?重載當前頁面會造成混亂，-->
     </div>
 
 
