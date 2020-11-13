@@ -48,7 +48,7 @@
     </div>
     <div class="text-center">
         
-        <a href="#" class="btn btn-info p-2">輸入獎號</a>
+        <a href="?do=add_awards" class="btn btn-info p-2">輸入獎號</a>
         </div>
         <div class="text-center">
             
