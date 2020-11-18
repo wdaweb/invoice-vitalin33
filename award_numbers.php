@@ -43,6 +43,16 @@
             }
         }
 ?>
+        <div class="d-inline-block align-centent-center">
+         <div class="row justify-content-around" style="list-style-type: none;padding:0;">
+            <li><a href="">1、2月</a></li>
+            <li><a href="">3、4月</a></li>
+            <li><a href="">5、6月</a></li>
+            <li><a href="">7、8月</a></li>
+            <li><a href="">9、10月</a></li>
+            <li><a href="">11、12月</a></li>
+         </div>
+
 
         <table class="table table-bordered table-sm" summary="統一發票中獎號碼單"> 
         <tbody>
@@ -61,6 +71,8 @@
             echo $month[$period];
         ?> 月 </td> 
          </tr> 
+
+
 
          <tr> 
           <th id="special_prize" rowspan="2">特別獎</th> 
@@ -120,15 +132,11 @@
           <td headers="addSix_prize" class="number">
           <?php 
                     foreach($type4 as $s){
-
                         echo $s."<br>";
-
                     }
-
-                ?>
+         ?>
           </td> 
          </tr> 
         </tbody>
-     
-     
        </table> 
+       </div>
