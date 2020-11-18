@@ -1,7 +1,10 @@
 <?php
 include_once "base.php";
 
-$sql="select * from `invoices` order by date";  //可以在此加入排序清單
+$period=ceil(date("m")/2);  //只顯示當月發票：step:1   --2020/11/18新增
+
+
+$sql="select * from `invoices` where `period`='$period' order by date";  //可以在此加入排序清單
                                                 //ORDER BY用途：order by date [由小到大] .... order by date desc [由大到小]
 
 $row=$pdo->query($sql)->fetchALL();   
