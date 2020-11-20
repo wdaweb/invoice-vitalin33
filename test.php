@@ -2,30 +2,6 @@
 
     include_once "base.php";
 
-    
-    /*寫法一*/
-    //echo find('invoices',"id='9'")['code'];  //函式本身如果有RETURN值的話，函式本就是一個變數，如果要取用變數的話，就再使用中括號指定希望echo的欄位資料。
-
-    /**寫法二
-    * $row=find('invoices',"id='9'");
-    * echo $row['code'];
-    * echo $row['number'];
-    */
-
-
-    /**第一階段：最簡單的函式套用
-    *function find($table,$def){  //本語法預設只會取回一筆資料
-    *    global $pdo;
-    *    $sql="select * from $table where $def";
-    *    $row=$pdo->query($sql)->fetch();
-    *    return $row;
-    }
-    */
-
-
-
-    /**第二階段：進階函式套用*/
-    /*↓↓↓↓↓↓↓↓在一個function裡同時放數字也可放條件，讓使用範圍更加廣：增加條件判斷式↓↓↓↓↓↓↓*/
     function find($table,$id){  //本語法預設只會取回一筆資料
             global $pdo;
             $sql="select * from $table where";
@@ -46,40 +22,64 @@
             return $row;
         }
 
-    /**第三階段：增加查詢資料量 ===========> 陣列跟資料互轉
-     * 保留第二階段製作的function，並增加字串產生方式如下述：
-     * 有n個欄位 a="B" && 【______】 && 【______】 && ... (使用&&)變成陣列型態，使用implode將字串組起來
-     * 產出陣列的方式：
-     * 'A'='B', 'C'='D','E'='F'.....
-     */
 
-    /**演示 
-    echo implode("&&",['欄位1'=>'值1','欄位2'=>'值2','id'=>'9']); //implode只會將串起來的符號放在兩個字串的正中間
-    echo "<br>";
-    echo "'欄位1'=>'值1' && '欄位2'=>'值2' && 'id'=>'9'";
-    echo "<hr>";
-    $array=['欄位1'=>'值1','欄位2'=>'值2','id'=>'9'];  //透過陣列的方式，讓迴圈幫忙跑出在SQL中需要的字串格式
-    echo "<hr>";
-    */
+        function all($table, ...$arg){      
+            global $pdo;
 
 
-    //print_r($tmp);
-   // echo "<br>";
-    //echo implode("&&",$tmp);                //使用implode把暫時陣列中的片串再串成SQL會用到的語句
+           //echo gettype($arg); //gettype()函式可以讓你知道這個陣列的資料型態
+        
+            $sql="select * from $table ";
+
+            if(isset($arg[0])){
+            if(is_array($arg[0])){
+              
+                if(!empty($arg[0])){
+                    foreach($arg[0] as $key => $value){
     
-    echo "<br>";
+                        $tmp[]=sprintf("`%s`='%s'",$key,$value);        //寫法二：sprintf：可以先決定字串的函式，%s是字串，%d是數字
+                    }
+                 $sql=$sql."where".implode(' && ',$tmp);
+                }
 
-     $row=find('invoices',['code'=>'AB', 'number'=>'69874947']);
-     echo $row['code'].$row['number']."<br>";
-     
-     $row=find('invoices',16);
-     echo $row['code'].$row['number']."<br>";
-     
-     $row=find('invoices',33);
-     echo $row['code'].$row['number']."<br>";
+            }else{
+                //製作非陣列的語句接在SQL後面
+                // echo "arg[0]不存在或arg[0]不是陣列";
+                $sql=$sql.$arg[0];
 
+            }
+        }
 
+            if(isset($arg[1])){
+                //製作接在最後面的句子字串
+                // $sql=$sql."order by date desc";
+                $sql=$sql.$arg[1];
+            }
+        
+            echo $sql."<br>";
+            return $pdo->query($sql)->fetchAll();
+        }
+    
+        
+        //print_r(all('invoices')[0]);   //最後的那個[0]，在測試跑資料時就試跑一筆，如果要改撈全部資料，就把[0] 拿掉0
+        
 
+        /*舉不同例子
+        print_r(all('invoices'));                                         //輸出全部資料
+        print_r(all('invoices',['code'=>'GD','period'=>6]));              //輸出指定欄位資料
+        print_r(all('invoices',['code'=>'AB','period'=>1]), "order by date desc");  ///輸出資料之後，再加上ORDER BY "參數"
+        print_r(all('invoices',"limit 5"));                               //輸出限定參數的資料，例如limit 5就是前五筆
+        */
+
+        echo "<hr>";                                         
+        all('invoices');
+        echo "<hr>";                                         
+        all('invoices',['code'=>'GD','period'=>6]);             
+        echo "<hr>";                                         
+        all('invoices',['code'=>'AB','period'=>1], "order by date desc");  
+        echo "<hr>";                                         
+        all('invoices',"limit 5");  
+        echo "<hr>";                                         
 
 
 
