@@ -2,7 +2,7 @@
 
         include_once "base.php";
 
-    $period_str=[
+    $period_str=[                  //利用傳來的period值，以陣列方式儲存期別所代表的月份，以供顯示
         1=>'1,2月',
         2=>'3,4月',
         3=>'5,6月',
@@ -17,15 +17,14 @@
 
     //撈出該期的發票
 
-    $sql="select * from `invoices` where `period`='{$_GET['period']}' && left(date,4)='{$_GET['year']}' order by date desc";
-
-    $invoices=$pdo->query($sql)->fetchAll();
-
-
                         /** mysql取得年份的方式：
                         *  1. YEAR(date)
                         *  2. substr / left / right 函數 ：left(date,長度)
                         **/
+
+    $sql="select * from `invoices` where `period`='{$_GET['period']}' && left(date,4)='{$_GET['year']}' order by date desc";
+
+    $invoices=$pdo->query($sql)->fetchAll();
 
     // echo "<br>".count($invoices);
     // echo "<pre>";
@@ -106,21 +105,13 @@
                             }
                     break;
                         }
-                  
-        
                 }
-        
-
-
-
             }     
 
             if($allResult==-1){
                 echo "別灰心，幸運女神終會眷顧您~<br>";
             }
     
-
-
 ?>
 
 <!-- 單期全部對獎 -->
