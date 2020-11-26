@@ -4,10 +4,12 @@ include_once "base.php";
 $period=ceil(date("m")/2);  //只顯示當月發票：step:1   --2020/11/18新增
 
 
-$sql="select * from `invoices` where `period`='$period' order by date";  //可以在此加入排序清單
+//$sql="select * from `invoices` where `period`='$period' order by date";  //可以在此加入排序清單
                                                 //ORDER BY用途：order by date [由小到大] .... order by date desc [由大到小]
 
-$row=$pdo->query($sql)->fetchALL();   
+//$row=$pdo->query($sql)->fetchALL();   
+$rows=all('invoices', ['period'=>$period], ' order by date desc');
+
 ?>
 <div class="row justify-content-around" style="list-style-type: none;padding:0;">
 <li><a href="">1、2月</a></li>

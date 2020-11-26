@@ -1,4 +1,6 @@
 <?php
+
+    
 //撰寫新增消費發票的程式碼
 
 // echo "<pre>";
@@ -21,18 +23,19 @@
 //    $tmp2[]=$value;
 // }
 //--------------------------上面是解析演進史-----------------------
-    $dsn="mysql:host=localhost;dbname=invoicedb;charset=utf8";
-    $pdo=new PDO($dsn,'root','');
+
+    include_once "../base.php";
     
     echo "<pre>";
     print_r(array_keys($_POST));
     echo "</pre>";
 
+    save('invoices',$_POST);
     
-    $sql="insert into invoices (`".implode("`,`",array_keys($_POST))."`) values('".implode("','",$_POST)."')";
+   /* $sql="insert into invoices (`".implode("`,`",array_keys($_POST))."`) values('".implode("','",$_POST)."')";
     echo $sql;
     $pdo->exec($sql);  //新增的話不用用FETCH
-
+*/
     echo "新增完成";
     header("location:../index.php?do=invoice_list");
 
