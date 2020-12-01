@@ -32,7 +32,7 @@
     award_numbers 
     (`year`,`period`,`number`,`type`)
     
-    values('$year','$period','{$_POST['special_prize']}','2')";
+    values('$year','$period','{$_POST['grand_prize']}','2')";
     $pdo->exec($sql);
 
     //頭獎的新增 type=3
@@ -61,6 +61,6 @@
 
 
     echo "新增完成";
-    header("location:../index.php?do=award_numbers&pd=".$year."-".$period);
+    header("location:../main.php?do=award_numbers&pd=".$year."-".$period);
 
 ?>

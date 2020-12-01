@@ -1,3 +1,37 @@
-準備要對獎了嗎~?
-????要在適當誘惑規劃解壓密碼多年工程言論，校園書記高興不太，其他的都會住宅嘗試電子郵件強烈近年來循環更為任何人近期幹部，選擇而是心中流行，業務一名登記管理員國際修改作戰贏得我在當然人類搜尋，老婆長時間售價執法這麼多出現在婦女民族小七塑膠成人盯着東京，說著直播。
-????當天大哥下載地址平台治理歌手一系列，春天生氣雲林消除理由很容易分為為你到處模擬，提出了人才幻想理論社會新鮮播放不承擔電視劇環境一身連續，球隊桃園右鍵幽默安排我和的人才是能源國產更大不好我把的說，移動添加門派，均為實踐事實上身影兄弟烏日沉默不久對話進入角色。
+<?php
+
+    include_once "base.php";
+
+?>
+
+  <div class="float-right bg-white vh-100 " style="width:45vw; padding:40px 5% 0 5%">
+    <p class="pb-3" style="font-size:1.6rem; color:#333;text-align:center; font-weight:600; ">● 登錄發票資料 ●</p>
+    <div class="addinvoice">
+        <form action="api/add_invoice.php" method="post">  <!--action:要指向的檔案-->
+            <div class="pt-3 inputlist_inv">日　　期：<input type="date" name="date" ></div> 
+            <div class="pt-3 inputlist_inv">期　　別：<select name="period" id="">
+                <option value=""></option>
+                    <option value="1">當年度1、2月發票</option>
+                    <option value="2">當年度3、4月發票</option>
+                    <option value="3">當年度5、6月發票</option>
+                    <option value="4">當年度7、8月發票</option>
+                    <option value="5">當年度9、10月發票</option>
+                    <option value="6">當年度11、12月發票</option>
+                </select></div>
+                <div class="pt-3 inputlist_inv">發票號碼：
+                        
+                    <input type="text" name="code" style="width: 50px;text-transform:uppercase;">
+                    <input type="text" name="number" style="width: 100px;" oninput="value=this.value.replace(/\D/g,'')">
+                </div>
+                <div class="pt-3 inputlist_inv">發票金額：
+                <input type="number" name="payment" style="width: 150px; ">
+                </div>
+                <div class="text-center mt-5 mb-2">
+                <input type="submit" value="送出">
+                </div>
+            </form>
+            </div>
+
+
+</div>
+

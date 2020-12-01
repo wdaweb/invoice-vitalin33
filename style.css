@@ -1,0 +1,276 @@
+/* index.html */
+body{
+       
+        /* background-repeat: no-repeat;
+        background-size: cover; */
+        /* background-position: 30px 30px 30px 30px; */
+        margin: 0;
+        padding: 0;    
+    }
+
+    .wrapper{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background: linear-gradient(90deg, rgba(177,138,7,1) 0%, rgba(219,151,0,1) 20%, rgba(255,248,0,1) 69%, rgba(176,141,13,1) 98%);
+        }
+
+        .box div{
+        position: absolute;
+        width: 60px;
+        height: 60px;
+        background-color: transparent;
+        border: 6px solid rgb(83, 60, 60,0.8);
+
+        }
+
+        .box div:nth-child(1){
+            top:12%;
+            left:42%;
+            animation: animate 10s linear infinite;
+            
+        }
+        .box div:nth-child(2){
+            top:70%;
+            left:50%;
+            animation: animate 7s linear infinite;
+        }
+        .box div:nth-child(3){
+            top:17%;
+            left:6%;
+            animation: animate 9s linear infinite;
+        }
+        .box div:nth-child(4){
+            top:20%;
+            left:60%;
+            animation: animate 10s linear infinite;
+        }
+        .box div:nth-child(5){
+            top:67%;
+            left:10%;
+            animation: animate 6s linear infinite;
+        }
+        .box div:nth-child(6){
+            top:80%;
+            left:70%;
+            animation: animate 12s linear infinite;
+        }
+        .box div:nth-child(7){
+            top:60%;
+            left:80%;
+            animation: animate 15s linear infinite;
+        }
+        .box div:nth-child(8){
+            top:32%;
+            left:25%;
+            animation: animate 16s linear infinite;
+        }
+        .box div:nth-child(9){
+            top:90%;
+            left:25%;
+            animation: animate 9s linear infinite;
+        }
+        .box div:nth-child(10){
+            top:20%;
+            left:80%;
+            animation: animate 5s linear infinite;
+        }
+
+
+        @keyframes animate{
+            0%{
+                transform: scale(0) translateY(0) rotate(0);
+                opacity: 1;
+            }
+            100%{
+                transform: scale(1.3) translateY(-90px) rotate(360deg);
+                opacity: 0;
+            }
+
+        }
+
+
+
+    .first_word{
+        margin-top: 300px;
+        position:relative;
+        font-size: 60px;
+        color: rgb(32, 5, 131);
+        font-family: 'Noto Sans TC',Arial, Helvetica, sans-serif;
+    }
+    .second_word{
+        position:relative;
+        font-size: 20px;
+        color: rgb(80, 165, 255);
+        font-family:'Noto Sans TC',Arial, Helvetica, sans-serif;
+    }
+
+.button_index{
+    z-index: 333;
+    text-decoration:none;
+    background-color: rgb(229, 238, 240);
+    border: 2px solid rgb(237, 237, 194);
+    color: rgb(220, 29, 79);
+
+}
+
+/* main.php */
+
+.styleSideMenu a{
+
+    font-size: 1.3rem;
+    list-style: none;
+    margin-top:10px;
+    margin-bottom:10px;
+    text-decoration: none !important;
+    line-height: 65px;
+    color: rgb(77, 65, 0);
+    box-sizing: border-box;
+    font-weight: 800
+    
+}
+
+
+.sidebar{
+    position: fixed;
+    width: 250px;
+    height: 100vh;
+    background: rgb(9, 22, 65);
+    background-image: url(https://images.unsplash.com/photo-1606583686915-912e005f6058?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=634&q=80);
+    background-position: center;
+    filter: sepia(0.5);
+    margin: 0;
+    padding: 0;
+}
+
+.signSet a{
+
+    justify-content:center;
+    text-decoration: none !important;
+    color: rgb(114, 88, 0);
+    border: 1px solid transparent;
+    background-color: rgb(211, 128, 4);
+    padding: 5px 10px 5px 10px;
+    border-radius: 20px;
+    margin-top: 10px;
+    font-weight: 800;
+
+}
+
+
+.sidebar header {
+    font-size: 1.4rem;
+    color: aliceblue;
+    text-align: center;
+    margin-top: 20px;
+
+}
+
+.styleSideMenu a:hover {
+
+    padding: 5px;
+    color: rgb(109, 101, 67);
+    text-decoration: none;
+    -webkit-text-stroke: 0.5px rgb(49, 46, 14);
+}
+
+.signSet a:hover{
+
+
+    color: rgb(11, 1, 37);
+    text-decoration: none;
+    font-weight: 600;
+    background:linear-gradient(90deg, rgba(226,192,0,1) 0%, rgba(245,255,70,1) 57%, rgba(255,255,255,1) 68%, rgba(255,229,53,1) 78%);
+}
+
+li{
+    list-style: none;
+}
+
+
+.object_01{
+    width: 1000px;
+    height: 100vh;
+    background-color: rgb(196, 194, 154);
+    padding: 0;
+    margin: 0;
+    left: 250px;
+
+    overflow: hidden;
+}
+
+
+/* 新增發票 */
+.addinvoice{
+    
+    background-color: rgb(192, 127, 6);
+    border: 2px dotted rgb(242, 200, 123);
+    border-radius: 15px;
+
+}
+
+.inputlist_inv{
+
+        color: white;
+        padding-left: 30px;
+        padding-bottom: 15px;
+
+}
+
+/* 新增獎號 */
+.addawards{
+
+    text-align: center;
+    font-size: 15px;
+    height: 60px;
+    line-height: 60px;
+    background-color: rgb(228, 194, 131);
+}
+
+.addawards_01{
+
+    height: 68px;
+    /* line-height: 60px; */
+    display: flex;
+    align-items: center;
+}
+
+
+/* 本期中獎全部對獎 */
+
+.award_thisp{
+
+    border: 1px solid black;
+    width: 600px;
+    text-align: center;
+    line-height: 30px;
+    height: 20px;
+    font-size: 1.1rem;
+}
+
+.award_thisth{
+
+        text-align: center;
+        width: 600px;
+        background-color: rgb(228, 194, 131);
+        border:1px solid black;
+        font-weight: 600;
+        font-size: 1.2rem;
+
+}
+.award_thistd{
+
+        text-align: center;
+        width: 600px;
+        border:1px solid black;
+        font-size: 1.1rem;
+}
+
+.award_title{
+
+        font-size: 1.1rem;
+        color:rgb(192, 127, 6);
+
+
+}
