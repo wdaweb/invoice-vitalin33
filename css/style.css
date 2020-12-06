@@ -1,9 +1,5 @@
 /* index.html */
 body{
-       
-        /* background-repeat: no-repeat;
-        background-size: cover; */
-        /* background-position: 30px 30px 30px 30px; */
         margin: 0;
         padding: 0;    
     }
@@ -13,9 +9,28 @@ body{
         width: 100%;
         height: 100%;
         overflow: hidden;
-        background: linear-gradient(90deg, rgba(177,138,7,1) 0%, rgba(219,151,0,1) 20%, rgba(255,248,0,1) 69%, rgba(176,141,13,1) 98%);
-        }
+        /* background: linear-gradient(90deg, rgba(177,138,7,1) 0%, rgba(219,151,0,1) 20%, rgba(255,248,0,1) 69%, rgba(176,141,13,1) 98%); */
+        /* background: url(../images/kCphmBI.jpg); */
+        background: linear-gradient(90deg, rgba(228,227,225,1) 20%, rgba(255,255,255,1) 48%, rgba(228,227,225,1) 78%, rgba(157,157,157,0.711922268907563) 100%);
 
+        
+    }
+
+
+        .first_word{
+            margin-top: 30%;
+            position:relative;
+            font-size: 60px;
+            color: rgb(32, 5, 131);
+            font-family: 'Noto Sans TC',Arial, Helvetica, sans-serif;
+        }
+        .second_word{
+            position:relative;
+            font-size: 20px;
+            color: rgb(80, 165, 255);
+            font-family:'Noto Sans TC',Arial, Helvetica, sans-serif;
+        }
+    
         .box div{
         position: absolute;
         width: 60px;
@@ -92,28 +107,15 @@ body{
 
 
 
-    .first_word{
-        margin-top: 300px;
-        position:relative;
-        font-size: 60px;
-        color: rgb(32, 5, 131);
-        font-family: 'Noto Sans TC',Arial, Helvetica, sans-serif;
-    }
-    .second_word{
-        position:relative;
-        font-size: 20px;
-        color: rgb(80, 165, 255);
-        font-family:'Noto Sans TC',Arial, Helvetica, sans-serif;
-    }
 
-.button_index{
-    z-index: 333;
-    text-decoration:none;
-    background-color: rgb(229, 238, 240);
-    border: 2px solid rgb(237, 237, 194);
-    color: rgb(220, 29, 79);
+        .button_index{
+            z-index: 333;
+            text-decoration:none;
+            background-color: rgb(229, 238, 240);
+            border: 2px solid rgb(237, 237, 194);
+            color: rgb(220, 29, 79);
 
-}
+        }
 
 /* main.php */
 
@@ -125,9 +127,9 @@ body{
     margin-bottom:10px;
     text-decoration: none !important;
     line-height: 65px;
-    color: rgb(77, 65, 0);
+    color: rgb(7, 129, 138);
     box-sizing: border-box;
-    font-weight: 800
+    font-weight: 800;
     
 }
 
@@ -136,10 +138,11 @@ body{
     position: fixed;
     width: 250px;
     height: 100vh;
-    background: rgb(9, 22, 65);
-    background-image: url(https://images.unsplash.com/photo-1606583686915-912e005f6058?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=634&q=80);
-    background-position: center;
-    filter: sepia(0.5);
+    background: rgb(12, 53, 186);
+    /* background-image: url(https://images.unsplash.com/photo-1606583686915-912e005f6058?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=634&q=80); */
+    background-image: url("https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80");
+    background-position:bottom 5px right -20px ;
+    background-size: 360px 100vh;
     margin: 0;
     padding: 0;
 }
@@ -170,7 +173,7 @@ body{
 .styleSideMenu a:hover {
 
     padding: 5px;
-    color: rgb(109, 101, 67);
+    color: rgb(250, 247, 235);
     text-decoration: none;
     -webkit-text-stroke: 0.5px rgb(49, 46, 14);
 }
@@ -196,7 +199,6 @@ li{
     padding: 0;
     margin: 0;
     left: 250px;
-
     overflow: hidden;
 }
 
@@ -205,16 +207,20 @@ li{
 .addinvoice{
     
     background-color: rgb(192, 127, 6);
-    border: 2px dotted rgb(242, 200, 123);
+    background-image:url("https://images.unsplash.com/photo-1565115868297-2e5de855ac7e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80") ;
+    border: 2px dotted rgb(115, 182, 245);
     border-radius: 15px;
+    opacity: 0.8;
 
 }
 
 .inputlist_inv{
 
-        color: white;
+        color: rgb(10, 90, 133);
         padding-left: 30px;
         padding-bottom: 15px;
+        font-weight: 700;
+
 
 }
 
@@ -225,6 +231,9 @@ li{
     font-size: 15px;
     height: 60px;
     line-height: 60px;
+    
+}
+.addawards_1{
     background-color: rgb(228, 194, 131);
 }
 
@@ -273,4 +282,36 @@ li{
         color:rgb(192, 127, 6);
 
 
+}
+
+.nborder td, .nborder th{
+
+    border: 5px solid #1561ae;
+}
+
+/* 登入畫面 :login_main.php*/
+
+.login_bg{
+
+    background-color: turquoise;
+
+}
+.login_btn{
+
+        border: 1px solid white;
+        background: linear-gradient(90deg, rgba(228,227,225,1) 20%, rgba(255,255,255,1) 48%, rgba(228,227,225,1) 78%, rgba(157,157,157,0.711922268907563) 100%);
+        width: 100px;
+        border-radius:15px ;
+        
+}
+
+
+
+/* 通用BTN */
+.awards_btn{
+
+    border: 1px solid white;
+    background: linear-gradient(90deg, rgba(228,227,225,1) 20%, rgba(255,255,255,1) 48%, rgba(228,227,225,1) 78%, rgba(157,157,157,0.711922268907563) 100%);
+    width: 500px;
+    
 }

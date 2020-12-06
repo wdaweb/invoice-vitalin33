@@ -5,7 +5,10 @@
 
 ?>
 
+<body>
 
+    <div class="float-right bg-white vh-100 " style="width:45vw; padding:40px 5% 0 5%">
+        <p class="pb-3" style="font-size:1.6rem; color:#333;text-align:center; font-weight:600; ">● 您已登錄的發票清單 ●</p>
         <div class="col-md-6 text-center border p-4 mx-auto">
             <div class="text-center">確認要刪除以下發票資料嗎？</div>
 
@@ -26,3 +29,8 @@
 
         </div>
 </div>
+</div>
+
+
+
+</body>

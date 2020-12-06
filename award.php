@@ -1,5 +1,4 @@
 
-
 <?php
 
 include_once "base.php";
@@ -106,10 +105,38 @@ include_once "base.php";
           
 
         }
-
-        if($allResult==-1){
-            echo "別灰心，幸運女神終會眷顧您~<br>";
-        }
-
-        //作業：請新增中了這個獎會有多少錢
 ?>
+
+<style>
+    .noLuckybg{
+        background-image:url("https://images.unsplash.com/photo-1516822003754-cca485356ecb?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80");
+        /* backdrop-filter:blur(3px); */
+        background-position:center;
+
+    }
+</style>
+
+<body>
+<div class="float-right bg-white vh-100  noLuckybg" style="width:45vw; padding:40px 5% 0 5%">
+<p class="pb-3" style="font-size:1.6rem; color:#eee;text-align:center; font-weight:600; ">● 本次中獎結果 ●</p>
+    <?php
+        if($allResult==-1){
+    ?>
+        <div class="">
+ 
+        <p class='text-center animate__animated animate__swing animate__repeat-3' style='font-size:2.6rem; color:#ffe691; margin-top:15%;'>別灰心，幸運女神終會眷顧您~</p><br>
+        </div>
+
+         
+
+<?php
+        }     
+?>
+
+
+</div>
+
+
+<img src="./images/break_heart.png" class="animate__animated animate__pulse animate__infinite" style="display:flex; position:absolute; top:68%; left:35%; width:300px;">
+
+</body>

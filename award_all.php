@@ -175,13 +175,13 @@
                  for($k=0;$k<count($award_j);$k++){ 
                         echo "<tr class='award_thisp'>";           
                         echo "<td class='award_thisp'>"; //製造格子
-                        echo "<p style='color:red'>".$award_j[$k]."</p>";
+                        echo "<p style='color:#242423; font-size:1.2rem; line-height:1.2rem; padding-top:10px;'>".$award_j[$k]."</p>";
                         echo "</td>"; //製造格子
                         echo "<td class='award_thisp'>"; //製造格子
-                        echo "<p style='color:red'>".$award_t[$k]."</p>";
+                        echo "<p style='color:#242423; font-size:1.2rem; line-height:1.2rem;padding-top:10px;'>".$award_t[$k]."</p>";
                         echo "</td>"; //製造格子
                         echo "<td class='award_thisp'>"; //製造格子
-                        echo "<p style='color:red'>".$money_t[$k]."</p>";
+                        echo "<p style='color:#242423; font-size:1.2rem; line-height:1.2rem;padding-top:10px;'>".$money_t[$k]."</p>";
                         echo "</td>"; //製造格子
                         echo "</tr>";
                 }

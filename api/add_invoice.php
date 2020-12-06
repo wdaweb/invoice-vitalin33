@@ -1,4 +1,15 @@
+
 <?php
+
+include_once "base.php";
+session_start();
+
+if(isset($_GET['pd'])){
+    $period=mb_substr($_GET['pd'],-1);
+}else{
+    $period=ceil(date("m")/2); 
+}
+
 //撰寫新增消費發票的程式碼
 
 // echo "<pre>";
@@ -21,20 +32,18 @@
 //    $tmp2[]=$value;
 // }
 //--------------------------上面是解析演進史-----------------------
-    $dsn="mysql:host=localhost;dbname=invoicedb;charset=utf8";
-    $pdo=new PDO($dsn,'root','');
     
-    echo "<pre>";
-    print_r(array_keys($_POST));
-    echo "</pre>";
+    // echo "<pre>";
+    // print_r(array_keys($_POST));
+    // echo "</pre>";
 
-    
-    $sql="insert into invoices (`".implode("`,`",array_keys($_POST))."`) values('".implode("','",$_POST)."')";
+    $sql="insert into invoices (`".implode("`,`",array_keys($_POST))."`) values('".implode("','",$_POST)."'), ";
     echo $sql;
     $pdo->exec($sql);  //新增的話不用用FETCH
 
     echo "新增完成";
-    header("location:../main.php?do=invoice_list");
+    $z=date("Y");
+    header("location:../main.php?do=invoice_list&pd=$z-$period&page=1");
 
 
 ?>
